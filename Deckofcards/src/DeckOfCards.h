@@ -5,11 +5,11 @@
 // DeckOfCards class definition
 class DeckOfCards {
 public:
-	int straight();
-	int flush();
-	int threeOfKind();
-	int twoPairOfCards();
-	int pairOfCards();
+	bool straight();
+	bool flush();
+	bool threeOfKind();
+	bool twoPairOfCards();
+	bool pairOfCards();
 	DeckOfCards(); // constructor initializes deck
 	void shuffle(); // shuffles cards in deck
 	void deal(); // deals cards in deck

@@ -46,7 +46,7 @@ void DeckOfCards::shuffle() {
 	}
 }
 
-int DeckOfCards::pairOfCards() {
+bool DeckOfCards::pairOfCards() {
 	int counter[13] = { 0 };
 	for (int i = 0; i < 5; i++) {
 
@@ -70,7 +70,7 @@ for(int i = 0; i < 13; i++){
 
 
 
-int DeckOfCards::twoPairOfCards() {
+bool DeckOfCards::twoPairOfCards() {
 	int counter[13] = { 0 };
 for (int i = 0; i < 5; i++) {
 	counter[handrow[i]]++;
@@ -89,7 +89,7 @@ if(count > 1){
 return false;
 }
 
-int DeckOfCards::threeOfKind() {
+bool DeckOfCards::threeOfKind() {
 	int counter[13] = { 0 };
 	for (int i = 0; i < 5; i++) {
 
@@ -111,7 +111,7 @@ for(int i = 0; i < 13; i++){
 		return false;
 }
 
-int DeckOfCards::flush() {
+bool DeckOfCards::flush() {
 	int counter[4] = {0};
 	for(int i = 0; i < 5; i ++){
 
@@ -165,7 +165,7 @@ for (int card = 1; card <= 5; card++) {
 //}
 } // end function deal
 
-int DeckOfCards::straight() {
+bool DeckOfCards::straight() {
 
 	int min = handcol[0];
 
@@ -202,33 +202,9 @@ return false;
 
 
 
-int DeckOfCards::straight() {
-
-	int min = handcol[0];
-
-	for(int i = 0; i < 5; i++){
-		if(min > handcol[i]){
-			min = handcol[i];
-		}
-
-	}
-	int nextCard = min + 1;
-	for(int i = 0; i < 5; i++){
-		if(handcol[i]==nextCard){
-			nextCard++;
-
-		}
-	}
-if((min+5) == nextCard){
-	return true;
-}
-else
-{
-return false;
-}
 
 
-}
+
 
 //void DeckOfCards::secondDeal() {
 //	// initialize suit array
